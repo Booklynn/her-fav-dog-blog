@@ -113,8 +113,15 @@ footer a {
 }
 
 @keyframes display-card {
-    from { opacity: 0; transform: scale(0) rotateY(-20deg);}
-    to { opacity: 1; transform: scale(1) rotateY(0deg);}
+    from {
+        opacity: 0;
+        transform: scale(0) rotateY(-20deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotateY(0deg);
+    }
 }
 
 .card {
@@ -124,8 +131,9 @@ footer a {
 }
 
 .card .card-inner {
-    width: 800px;
-    height: 450px;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
     transform-style: preserve-3d;
     transition: transform 4s;
     position: relative;
@@ -135,7 +143,8 @@ footer a {
     transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
     position: absolute;
     width: 100%;
     height: 100%;
